@@ -568,16 +568,23 @@ h2 {
 
 
 /* ----------------------------------------------------------
-   ABOUT — founder placeholder
+   ABOUT — team grid
    ---------------------------------------------------------- */
-.founder-placeholder {
-  padding: var(--space-6);
-  border: 1px dashed var(--color-border);
-  border-radius: var(--radius-md);
-  max-width: 420px;
-  margin-top: var(--space-6);
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
 }
-.founder-label {
+@media (max-width: 600px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
+.team-member {
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+.team-role {
   font-size: var(--text-xs);
   font-weight: 500;
   text-transform: uppercase;
@@ -585,14 +592,16 @@ h2 {
   color: var(--color-accent);
   margin-bottom: var(--space-2);
 }
-.founder-name {
+.team-name {
   font-family: var(--font-display);
   font-size: var(--text-lg);
-  margin-bottom: var(--space-2);
+  font-weight: 400;
+  margin-bottom: var(--space-3);
 }
-.founder-bio {
+.team-bio {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
+  line-height: 1.6;
 }
 
 
