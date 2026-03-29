@@ -81,11 +81,55 @@
         <h1 class="hero-headline">The partner for world&#8209;class hospitality brands entering&nbsp;Ireland.</h1>
         <p class="hero-sub">Ireland&rsquo;s &euro;9.8 billion foodservice market is growing, young, and underserved by global premium brands. Corner House Ventures is the dedicated operating partner to launch, protect, and scale the concepts that define the next era of Irish hospitality.</p>
         <div class="hero-actions">
-          <a href="./assets/CHV-Investment-Teaser.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer" download>Download Investment Teaser</a>
+          <a href="#teaser-gate" class="btn btn-primary">Download Investment Teaser</a>
           <a href="#for-brands" class="btn-text">Explore brand partnership &darr;</a>
         </div>
       </div>
     </section>
+
+
+    <!-- ==============================
+         TEASER GATE — lead capture modal
+         ============================== -->
+    <div class="modal-overlay" id="teaser-gate" aria-hidden="true">
+      <div class="modal" role="dialog" aria-labelledby="modal-title">
+        <button class="modal-close" aria-label="Close" id="modal-close">&times;</button>
+        <p class="section-label">Investment Teaser</p>
+        <h3 id="modal-title">Request our one&#8209;page investment&nbsp;teaser.</h3>
+        <p class="modal-sub">Fill in your details below. The PDF will download immediately and we&rsquo;ll follow up personally.</p>
+        <form class="modal-form" id="teaser-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="gate-name">Name</label>
+              <input type="text" id="gate-name" name="name" required autocomplete="name">
+            </div>
+            <div class="form-group">
+              <label for="gate-email">Email</label>
+              <input type="email" id="gate-email" name="email" required autocomplete="email">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="gate-company">Company</label>
+              <input type="text" id="gate-company" name="company" autocomplete="organization">
+            </div>
+            <div class="form-group">
+              <label for="gate-type">I am a&hellip;</label>
+              <select id="gate-type" name="type" required>
+                <option value="" disabled selected>Select one</option>
+                <option value="Brand / Franchisor">Brand / Franchisor</option>
+                <option value="Investor">Investor</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-dark-fill">Download Teaser</button>
+        </form>
+        <div class="modal-success" id="modal-success" style="display:none;">
+          <p>Thank you &mdash; your download should begin automatically.</p>
+        </div>
+      </div>
+    </div>
 
 
     <!-- ==============================

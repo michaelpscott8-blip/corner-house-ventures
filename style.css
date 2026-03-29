@@ -727,6 +727,109 @@ h2 {
 
 
 /* ----------------------------------------------------------
+   MODAL — teaser gate
+   ---------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(26, 24, 22, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal {
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  padding: clamp(var(--space-8), 4vw, var(--space-12));
+  max-width: 520px;
+  width: 100%;
+  position: relative;
+  transform: translateY(16px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.modal-overlay.active .modal {
+  transform: translateY(0);
+}
+.modal-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  font-size: 1.5rem;
+  color: var(--color-text-muted);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background var(--transition), color var(--transition);
+}
+.modal-close:hover {
+  background: rgba(0,0,0,0.05);
+  color: var(--color-text);
+}
+.modal h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 300;
+  line-height: 1.15;
+  margin-bottom: var(--space-3);
+}
+.modal-sub {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.modal-form .form-group label {
+  color: var(--color-text-muted);
+}
+.modal-form .form-group input,
+.modal-form .form-group select {
+  background: #fff;
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+.modal-form .form-group input:focus,
+.modal-form .form-group select:focus {
+  border-color: var(--color-accent);
+}
+.btn-dark-fill {
+  background: var(--color-dark);
+  color: var(--color-bg);
+  width: 100%;
+  margin-top: var(--space-2);
+}
+.btn-dark-fill:hover {
+  background: var(--color-dark-soft);
+}
+.modal-success p {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-style: italic;
+  color: var(--color-text-muted);
+  text-align: center;
+  padding: var(--space-8) 0;
+}
+
+
+/* ----------------------------------------------------------
    SCROLL REVEAL ANIMATIONS
    ---------------------------------------------------------- */
 .reveal {
