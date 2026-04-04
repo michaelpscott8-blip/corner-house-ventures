@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHV — Visual Direction Options</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: system-ui, sans-serif; background: #111; color: #fff; padding: 3rem 2rem; }
+  h1 { font-size: 1.8rem; font-weight: 300; margin-bottom: 0.5rem; }
+  p.sub { color: #999; margin-bottom: 3rem; font-size: 0.95rem; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+  .card { background: #1a1a1a; border-radius: 12px; overflow: hidden; transition: transform 0.2s; }
+  .card:hover { transform: translateY(-4px); }
+  .card a { text-decoration: none; color: inherit; display: block; }
+  .card img { width: 100%; height: 220px; object-fit: cover; }
+  .card-body { padding: 1.5rem; }
+  .card h2 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
+  .card .tag { display: inline-block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 20px; margin-bottom: 0.75rem; }
+  .card p { font-size: 0.85rem; color: #aaa; line-height: 1.6; }
+  .tag-a { background: #C9A84C22; color: #C9A84C; }
+  .tag-b { background: #6B7F5E22; color: #6B7F5E; }
+  .tag-c { background: #1AC8C822; color: #1AC8C8; }
+</style>
+</head>
+<body>
+  <h1>Corner House Ventures — Visual Direction Options</h1>
+  <p class="sub">Three directions for the wellness pivot. Tap to view each full mockup.</p>
+  <div class="grid">
+    <div class="card">
+      <a href="./option-a.html">
+        <img src="./assets/wellness-studio.png" alt="Option A preview">
+        <div class="card-body">
+          <span class="tag tag-a">Option A</span>
+          <h2>Dark & Gold</h2>
+          <p>Inspired by Saints Studios and Sweathouz. Deep charcoal base, warm champagne gold accent. Intimate, exclusive, premium wellness club feel. Elegant serif headlines.</p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="./option-b.html">
+        <img src="./assets/dublin-wellness-street.png" alt="Option B preview">
+        <div class="card-body">
+          <span class="tag tag-b">Option B</span>
+          <h2>Warm Editorial</h2>
+          <p>Evolution of the current CHV design. Warm linen background with dark hero sections for contrast. Sage accent. Soho House meets wellness — calm editorial confidence.</p>
+        </div>
+      </a>
+    </div>
+    <div class="card">
+      <a href="./option-c.html">
+        <img src="./assets/fitness-studio.png" alt="Option C preview">
+        <div class="card-body">
+          <span class="tag tag-c">Option C</span>
+          <h2>Bold Contrast</h2>
+          <p>Inspired by Barry's and FaceGym energy. Near-black with bold uppercase headlines and electric teal accent. High-energy but sophisticated — fitness meets venture capital.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
